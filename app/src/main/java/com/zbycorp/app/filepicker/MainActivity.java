@@ -18,11 +18,13 @@ import androidx.core.content.ContextCompat;
 import com.zbycorp.filepicker.ZbyFilePicker;
 import com.zbycorp.filepicker.ui.FilePickerActivity;
 
+import java.util.regex.Pattern;
+
 public class MainActivity extends AppCompatActivity {
 
     public static final int PERMISSIONS_REQUEST_CODE = 0;
     public static final int FILE_PICKER_REQUEST_CODE = 1;
-
+    private final Pattern excelPattern = Pattern.compile(".+.xlsx");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
                 .withRequestCode(FILE_PICKER_REQUEST_CODE)
                 .withHiddenFiles(false)
                 .withTitle("子不语文件选择器")
+                .withFilter(excelPattern)
                 .start();
     }
 

@@ -13,6 +13,9 @@ import java.io.FileFilter;
 import java.util.ArrayList;
 import java.util.regex.Pattern;
 
+/**
+ * @author xyh
+ */
 public class ZbyFilePicker {
     private Activity mActivity;
     private Fragment mFragment;
