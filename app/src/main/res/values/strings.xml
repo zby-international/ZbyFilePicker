@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">app</string>
+    <string name="pick_from_activity">在Activity中使用</string>
+    <string name="pick_from_fragment">在Fragment中使用</string>
+</resources>
