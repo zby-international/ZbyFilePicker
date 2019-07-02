@@ -14,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.core.content.PermissionChecker;
 
 import com.zbycorp.filepicker.ZbyFilePicker;
 import com.zbycorp.filepicker.ui.FilePickerActivity;
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
     private void checkPermissionsAndOpenFilePicker() {
         String permission = Manifest.permission.READ_EXTERNAL_STORAGE;
 
-        if (ContextCompat.checkSelfPermission(this, permission) != PackageManager.PERMISSION_GRANTED) {
+        if (PermissionChecker.checkSelfPermission(this, permission) != PermissionChecker.PERMISSION_GRANTED) {
             if (ActivityCompat.shouldShowRequestPermissionRationale(this, permission)) {
                 showError();
             } else {
@@ -69,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
                     showError();
                 }
             }
+            default:
         }
     }
 

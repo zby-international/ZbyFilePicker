@@ -1,0 +1,21 @@
+ext {
+    android = [
+            compileSdkVersion: 28,
+            minSdkVersion    : 19,
+            targetSdkVersion : 28,
+            versionCode      : 100,
+            versionName      : "1.0.1"
+    ]
+    libsVersion = [
+            supportLibrary_version = "1.0.2",
+            recyclerView_version = "1.0.0",
+            materia_version = "1.0.0"
+    ]
+
+    dependencies = [
+            appcompat   : "androidx.appcompat:appcompat:$rootProject.supportLibrary_version",
+            materia      : "com.google.android.material:material:$rootProject.materia_version",
+            recyclerView: "androidx.recyclerview:recyclerview:$rootProject.recyclerView_version"
+    ]
+
+}
